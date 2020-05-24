@@ -1,0 +1,44 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/attendances",
+      "handler": "attendance.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/attendances/count",
+      "handler": "attendance.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/attendances/:id",
+      "handler": "attendance.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/attendances",
+      "handler": "attendance.create",
+      "config": {
+        "policies": ["ensureUser", "attendOnlyOnce"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/attendances/:id",
+      "handler": "attendance.delete",
+      "config": {
+        "policies": ["isOwner"]
+      }
+    }
+  ]
+}
