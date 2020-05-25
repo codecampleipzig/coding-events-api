@@ -60,6 +60,10 @@
     "attendances": {
       "via": "user",
       "collection": "attendance"
+    },
+    "profile": {
+      "via": "user",
+      "model": "profile"
     }
   }
 }
