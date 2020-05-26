@@ -11,5 +11,4 @@
  */
 
 module.exports = () => {
-  console.log ('HEEEEELLLOOO!!!!');
 };
